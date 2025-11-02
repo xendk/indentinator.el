@@ -119,7 +119,7 @@
                               ,markers)))
 
 (defmacro indentinator-abort-indent ()
-  "Abort current indent, saving starte for resuming."
+  "Abort current indent, saving state for resuming."
   ;; Add changed markers and current position to aborted list.
   `(setq indentinator-aborted-markers (cons indentinator-current-marker
                                             (nconc indentinator-changed-markers
