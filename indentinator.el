@@ -243,6 +243,11 @@ Return whether the line changed."
         (message "indentinator: indent %d" (marker-position indentinator-current-marker)))
       (let ((inhibit-message t)
             (message-log-max nil))
+        ;; The ELisp manual states that timers that change buffer
+        ;; contents should use `undo-boundary' to separate the changes
+        ;; from the users changes. But we don't do that as that would
+        ;; require the user to undo twice whenever we'd run in order
+        ;; to undo their own changes.
         (ignore-errors (indent-region (line-beginning-position) (line-end-position))))
       (not (= tick (buffer-chars-modified-tick))))))
 
