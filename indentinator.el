@@ -46,12 +46,14 @@
   :group 'indentinator)
 
 (defcustom indentinator-initial-idle-time .01
-  "Time to wait after buffer modifications before starting re-indentation."
+  "Time to wait after buffer modifications before starting re-indentation.
+
+Time is in seconds and can be fractional."
   :type 'number
   :group 'indentinator)
 
 (defcustom indentinator-idle-time .01
-  "Idle time between re-indentation actions."
+  "Idle time in seconds between re-indentation actions."
   :type 'number
   :group 'indentinator)
 
