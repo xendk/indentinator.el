@@ -16,6 +16,12 @@ of the most recent change. Basically, it should be re-indenting where
 you're working and if you leave it be, eventually get everything
 re-indented if you make big changes.
 
+Note that Indentinator doesn't handle yanks specifically. Mostly it'll
+re-indent yanked code, but if the yanked code contains multiple lines
+that's already properly indented, it might stop prematurely. If you
+also want to fully re-indent yanked code, you might want to pair
+Indentinator with [snap-indent].
+
 # Requirements
 
 Emacs 25.
